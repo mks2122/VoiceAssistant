@@ -12,6 +12,7 @@ engine = pyttsx3.init()
 
 def speak(text):
     text = text[0:text.find("Some possible follow-up messages")]
+    text = text.replace("Bing", "Sage")
     engine.say(text)
     engine.runAndWait()
 
